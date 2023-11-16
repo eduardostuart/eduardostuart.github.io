@@ -70,14 +70,8 @@ module.exports = function (config) {
 
   // Plugins
   config.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"), {
-    lineSeparator: "\n",
-    preAttributes: {
-      tabindex: 0,
-      "data-language": function ({ language, content, options }) {
-        return language;
-      },
-    },
-    errorOnInvalidLanguage: true,
+    templateFormats: ["njk", "md"],
+    errorOnInvalidLanguage: false,
   });
   config.addPlugin(require("eleventy-plugin-youtube-embed"), {
     allowFullscreen: true,

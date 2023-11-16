@@ -8,11 +8,75 @@
 
 {% block body %}
     <div class="pt-14 w-full flex-wrap sm:flex-nowrap flex flex-row">
-        <div class="w-full sm:w-[65%] pr-4 mb-7 sm:mb-0">
-            <p>My name is Eduardo Stuart and I'm currently working at Warner Bros. Discovery as a Senior Software Engineer.</p>
+        <div class="w-full sm:w-[65%] sm:pr-10 sm:mb-0">
+            <div class="prose dark:prose-invert border-b border-gray-100 pb-7 dark:border-white/20">
+                <p>Hi 👋</p>
+                <p>I'm Eduardo Stuart, a software engineer with more than 16+ years of experience. I love to solve real-world problems through technology.</p>
+                <p class="mb-4">I'm interested in distributed systems, programming languages, and developer tools.</p>
+                <p>When I'm not in front of a computer, I'm probably reading a book, watching a movie, or cycling. </p>
+            </div>
+            <div>
+                <h3 class="font-bold pb-7 mt-7 text-lg">Skills</h3>
+
+                <div class="w-full flex justify-between flex-row text-xs sm:text-sm">
+                    <div>
+                        <p class="font-semibold">Languages</p>
+                        <ul class="py-2">
+                            <li>JavaScript</li>
+                            <li>TypeScript</li>
+                            <li>PHP</li>
+                            <li>Java</li>
+                            <li>Rust</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-semibold">Frameworks</p>
+                        <ul class="py-2">
+                            <li>Laravel</li>
+                            <li>React</li>
+                            <li>Vue.js</li>
+                            <li>Spring Boot</li>
+                            <li>Actix</li>
+                            <li>Next.js</li>
+                            <li>Nuxt.js</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-semibold">Infra/Cloud</p>
+                        <ul class="py-2">
+                            <li>AWS</li>
+                            <li>DigitalOcean</li>
+                            <li>Kubernetes</li>
+                            <li>Docker</li>
+                            <li>Terraform</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="text-sm font-semibold">Database</p>
+                        <ul class="py-2">
+                            <li>MySQL</li>
+                            <li>PostgreSQL</li>
+                            <li>Redis</li>
+                            <li>DynamoDB</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="w-full sm:w-[35%] border-l border-gray-200 dark:border-white/20 pl-4">
-            <h3 class="font-bold mb-7">Work</h3>
+        <div class="w-full sm:w-[35%] sm:pl-10">
+
+            <div class="relative hidden sm:block shadow-2xl rotate-2 overflow-hidden w-full rounded-lg mb-7">
+                <img src="https://github.com/eduardostuart.png" class="w-full mx-auto">
+                <div class="absolute bottom-0 left-0 right-0 flex items-center font-semibold p-2 bg-black/30">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2 text-white">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
+                    </svg>
+                    <span class="text-white font-bold text-sm">4544554152444F.JPG</span>
+                </div>
+            </div>
+
+            <h3 class="font-bold my-7 text-lg">Work experience</h3>
             <div class="py-2 divide-y-8 divide-transparent">
                 {% for item in about.work %}
                     <div class="flex w-full items-start">

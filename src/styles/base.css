@@ -1,17 +1,18 @@
 html,
-body {
-  @apply w-full h-full overflow-hidden;
+body,
+app {
+  @apply w-full h-full;
 }
 
-main {
-  @apply w-full h-full overflow-y-auto;
+body {
+  @apply bg-slate-100 dark:bg-black;
 }
 
 a {
-  @apply underline;
+  @apply text-black  dark:text-white dark:no-underline underline relative dark:before:bg-yellow-400 before:bg-lime-100 before:absolute before:w-full before:h-[30%] before:content-[''] before:top-[70%] before:-rotate-[.8deg] before:z-[-1];
 }
 
 a:hover,
 a:focus {
-  @apply bg-lime-100 dark:text-black;
+  @apply bg-lime-100 dark:bg-yellow-200  dark:text-black;
 }
