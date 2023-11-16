@@ -69,7 +69,21 @@ module.exports = function (config) {
   config.addPassthroughCopy("static/**/**.*");
 
   // Plugins
-  config.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"));
+  config.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"), {
+    lineSeparator: "\n",
+    preAttributes: {
+      tabindex: 0,
+      "data-language": function ({ language, content, options }) {
+        return language;
+      },
+    },
+    errorOnInvalidLanguage: true,
+  });
+  config.addPlugin(require("eleventy-plugin-youtube-embed"), {
+    allowFullscreen: true,
+    lazy: true,
+    modestBranding: true,
+  });
 
   return {
     // Custom folder directories

@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 html,
 body {
   @apply w-full h-full overflow-hidden;
@@ -18,8 +14,4 @@ a {
 a:hover,
 a:focus {
   @apply bg-lime-100 dark:text-black;
-}
-
-.title-text {
-  @apply text-2xl no-underline text-black dark:text-white font-black;
 }
