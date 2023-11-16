@@ -1,27 +1,28 @@
+// Utilities
 const htmlmin = require("html-minifier");
 
-// Path for blog posts
-const POSTS_PATH = "src/posts";
-
 const isProduction = process.env.NODE_ENV === "production";
+const siteUrl = process.env.SITE_URL || "http://localhost:8080";
+const siteVersion = process.env.SITE_VERSION || "unknown";
 
+/** @param {import("@11ty/eleventy").UserConfig} config */
 module.exports = function (config) {
   // Global variables
-  config.addGlobalData(
-    "siteUrl",
-    process.env.SITE_URL || "http://localhost:8080"
-  );
-  config.addGlobalData("siteVersion", process.env.SITE_VERSION || "unknown");
+  config.addGlobalData("siteUrl", siteUrl);
+  config.addGlobalData("siteVersion", siteVersion);
 
-  // Collection of posts in reverse date order
+  // Add a new collection of posts
+  // Filter out unpublished posts and sort by published date (descending)
   config.addCollection("posts", (collection) =>
     collection
-      .getFilteredByGlob(`${POSTS_PATH}/**/*.md`)
+      .getFilteredByGlob(`src/posts/**/*.md`)
       .filter((post) => !!post.data.published)
       .sort((a, b) => b.data.publishedAt - a.data.publishedAt)
   );
 
-  // Collection for sitemap generation
+  // Collection to generate sitemap
+  // This contains everything, pages, posts, etc.
+  // Content that is not published or has sitemap set to false will be filtered out
   config.addCollection("sitemap", (collection) =>
     collection
       .getFilteredByGlob(`./src/**/*.{md,njk}`)
@@ -33,7 +34,7 @@ module.exports = function (config) {
       .sort((a, b) => b.data.publishedAt - a.data.publishedAt)
   );
 
-  // Date format filter
+  // A filter to transform dates into more "human friendly" format
   config.addFilter("date", (value) => {
     return new Date(value).toLocaleDateString("en-US", {
       year: "numeric",
@@ -42,9 +43,11 @@ module.exports = function (config) {
     });
   });
 
+  // Minify html output
+  // More information here: https://www.11ty.dev/docs/config/#transforms
+  // This will only run when building in production
   config.addTransform("htmlmin", function (content) {
     if (!isProduction) return content;
-
     if (this.page.outputPath && this.page.outputPath.endsWith(".html")) {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
@@ -53,7 +56,6 @@ module.exports = function (config) {
       });
       return minified;
     }
-
     return content;
   });
 
@@ -66,9 +68,16 @@ module.exports = function (config) {
   config.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"));
 
   return {
+    // Custom folder directories
+    // Instead of _site it will be dist as output
+    //
+    // Setup layouts folder so it won't be generated as a page
+    // includes and layouts are relative to input
+    // https://www.11ty.dev/docs/config/#example-1
     dir: {
       input: "src/",
       output: "dist",
+      includes: "includes",
       layouts: "layouts",
     },
   };
