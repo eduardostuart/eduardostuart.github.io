@@ -1,0 +1,44 @@
+[
+  {
+    "company": "Warner Bros. Discovery",
+    "position": "Senior Software Engineer",
+    "start_date": "Apr 2022",
+    "end_date": "Present",
+    "logo": "/static/work/wbd.jpg"
+  },
+  {
+    "company": "adidas",
+    "position": "Senior Software Engineer",
+    "start_date": "May 2018",
+    "end_date": "Mar 2022",
+    "logo": "/static/work/adidas.jpg"
+  },
+  {
+    "company": "BOLDKING",
+    "position": "Full Stack Developer",
+    "start_date": "Jun 2017",
+    "end_date": "Apr 2018",
+    "logo": "/static/work/boldking.jpg"
+  },
+  {
+    "company": "Zup - Connect & Transform",
+    "position": "Senior Software Engineer",
+    "start_date": "Feb 2016",
+    "end_date": "Nov 2016",
+    "logo": "/static/work/zup.jpg"
+  },
+  {
+    "company": "Replay4.me",
+    "position": "Software Engineer",
+    "start_date": "Oct 2014",
+    "end_date": "Jun 2015",
+    "logo": "/static/work/replay4me.jpg"
+  },
+  {
+    "company": "Algar Mídia",
+    "position": "Software Engineer",
+    "start_date": "Mar 2008",
+    "end_date": "Jun 2014",
+    "logo": "/static/work/algar-midia.jpg"
+  }
+]

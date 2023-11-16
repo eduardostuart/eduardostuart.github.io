@@ -4,12 +4,16 @@ const htmlmin = require("html-minifier");
 const isProduction = process.env.NODE_ENV === "production";
 const siteUrl = process.env.SITE_URL || "http://localhost:8080";
 const siteVersion = process.env.SITE_VERSION || "unknown";
+const aboutData = {
+  work: require("./data/work.json"),
+};
 
 /** @param {import("@11ty/eleventy").UserConfig} config */
 module.exports = function (config) {
   // Global variables
   config.addGlobalData("siteUrl", siteUrl);
   config.addGlobalData("siteVersion", siteVersion);
+  config.addGlobalData("about", aboutData);
 
   // Add a new collection of posts
   // Filter out unpublished posts and sort by published date (descending)

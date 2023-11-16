@@ -2,7 +2,10 @@
 
 {%block title %}{{- title | safe -}} - Eduardo Stuart{% endblock %}
 
+{% block current_page %}
+    {{- title | safe -}}
+{% endblock %}
+
 {% block body %}
-    <h2 class="text-2xl block text-center pb-14">{{- title | safe -}}</h2>
-    <article class="w-full prose max-w-none prose-md">{{- content | safe -}}</article>
+    <article class="article">{{- content | safe -}}</article>
 {% endblock %}
