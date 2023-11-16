@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm-run-all -p dev:*",
-    "build": "npm-run-all -p build:*",
+    "build": "npm-run-all -s build:clean build:eleventy build:css",
     "dev:watch": "eleventy --serve",
     "dev:css": "tailwindcss -i ./src/style.css -o ./dist/style.css --watch",
     "build:clean": "rm -rf dist",
     "build:eleventy": "eleventy --output=dist",
-    "build:css": "tailwindcss -i ./src/style.css -o ./dist/style.css",
+    "build:css": "tailwindcss -i ./src/style.css -o ./dist/style.css -m",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Eduardo Stuart <e@s.tuart.me>",
