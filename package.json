@@ -5,16 +5,18 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm-run-all -p dev:*",
+    "build": "npm-run-all -p build:*",
     "dev:watch": "eleventy --serve",
     "dev:css": "tailwindcss -i ./src/style.css -o ./dist/style.css --watch",
-    "build": "eleventy --output=dist",
+    "build:clean": "rm -rf dist",
+    "build:eleventy": "eleventy --output=dist",
+    "build:css": "tailwindcss -i ./src/style.css -o ./dist/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Eduardo Stuart <e@s.tuart.me>",
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-img": "github:11ty/eleventy-img",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@tailwindcss/typography": "^0.5.10",
     "autoprefixer": "^10.4.16",
