@@ -7,6 +7,7 @@ module.exports = function (config) {
     "siteUrl",
     process.env.SITE_URL || "http://localhost:8080"
   );
+  config.addGlobalData("siteVersion", process.env.SITE_VERSION || "unknown");
 
   // Collection of posts in reverse date order
   config.addCollection("posts", (collection) =>
