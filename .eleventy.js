@@ -1,5 +1,9 @@
+const htmlmin = require("html-minifier");
+
 // Path for blog posts
 const POSTS_PATH = "src/posts";
+
+const isProduction = process.env.NODE_ENV === "production";
 
 module.exports = function (config) {
   // Global variables
@@ -36,6 +40,21 @@ module.exports = function (config) {
       month: "long",
       day: "numeric",
     });
+  });
+
+  config.addTransform("htmlmin", function (content) {
+    if (!isProduction) return content;
+
+    if (this.page.outputPath && this.page.outputPath.endsWith(".html")) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+      });
+      return minified;
+    }
+
+    return content;
   });
 
   // Copy static files
