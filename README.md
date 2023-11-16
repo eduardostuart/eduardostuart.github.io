@@ -1,6 +1,6 @@
 # Eduardo Stuart
 
-Personal website created with [Eleventy](https://www.11ty.dev/) and [Tailwind CSS](https://tailwindcss.com/).
+Personal website created with [Eleventy](https://www.11ty.dev/), [Nunjucks](https://mozilla.github.io/nunjucks/), and [Tailwind CSS](https://tailwindcss.com/).
 
 ## License
 
