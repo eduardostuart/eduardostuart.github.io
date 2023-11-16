@@ -6,10 +6,6 @@ published: true
 layout: "post"
 ---
 
-![](/static/content/files/apple-shortcut-openai/header.png)
-
-## Description
-
 In this post I'll explain how to create an Apple Shortcut integrated with OpenAI's GTP-3. If you don't want to read the entire post and just want to use the shortcut, you can [click here](/static/content/files/apple-shortcut-openai/Ask.shortcut) to download it.
 
 The goal of this shortcut will be: I want to ask a question and get an answer (which will be a basic http request-response).
