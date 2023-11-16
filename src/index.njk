@@ -1,0 +1,35 @@
+{% extends "./layouts/main.njk" %}
+
+{% block body %}
+
+    <div class="w-full flex flex-row flex-wrap pb-7 border-b border-gray-200 dark:border-white/10 text-sm">
+        <div class="w-full sm:w-[30%] mb-4 sm:mb-0">
+            <a href="/about">About</a>
+        </div>
+        <div class="w-full sm:w-[70%] divide-y-8 divide-transparent">
+            <p>My name is Eduardo Stuart and I'm currently working at <a href="https://wbd.com/" target="_blank" rel="nofollow">Warner Bros. Discovery</a> as a  Senior Software Engineer. </p>
+            <p>The best way to reach me is via my <a href="mailto:e@s.tuart.me" rel="nofollow">email</a>.</p>
+            <p>Find me on <a href="https://github.com/eduardostuart" rel="nofollow">GitHub</a> or <a href="https://linkedin.com/in/eduardostuart/" rel="nofollow">LinkedIn</a>.
+            </p>
+        </div>
+    </div>
+
+    <div class="w-full flex flex-row flex-wrap py-14 text-sm">
+        <div class="w-full sm:w-[30%] mb-4 sm:mb-0">
+            <a href="/posts">Posts</a>
+        </div>
+        <div class="w-full sm:w-[70%]">
+            {% for post in collections.posts %}
+                <div class="w-full flex flex-row items-center py-2 mb-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4  mr-2 text-gray-400 dark:text-white/60">
+                        <path fill-rule="evenodd" d="M10.21 14.77a.75.75 0 01.02-1.06L14.168 10 10.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd"/>
+                        <path fill-rule="evenodd" d="M4.21 14.77a.75.75 0 01.02-1.06L8.168 10 4.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd"/>
+                    </svg>
+                    <a href="{{ post.url }}" class="block">{{ post.data.title }}</a>
+                    <p class="ml-auto hidden sm:block">{{ post.data.publishedAt | date }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

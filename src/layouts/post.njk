@@ -1,0 +1,8 @@
+{% extends "./main.njk" %}
+
+{%block title %}{{- title | safe -}} - Eduardo Stuart{% endblock %}
+
+{% block body %}
+    <h2 class="text-2xl block text-center pb-14">{{- title | safe -}}</h2>
+    <article class="w-full prose max-w-none prose-md">{{- content | safe -}}</article>
+{% endblock %}

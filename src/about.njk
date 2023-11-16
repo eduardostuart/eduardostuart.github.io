@@ -1,0 +1,72 @@
+{% extends "./layouts/main.njk" %}
+
+{%block title %}About - Eduardo Stuart{% endblock %}
+
+{% block current_page %}
+    <h2>About</h2>
+{% endblock %}
+
+{% 
+    set work = [{
+        "company": "Warner Bros. Discovery",
+        "position": "Senior Software Engineer",
+        "start_date": "Apr 2022",
+        "end_date": "Present",
+        "logo": "/static/work/wbd.jpg"
+    },
+    {
+        "company": "adidas",
+        "position": "Senior Software Engineer",
+        "start_date": "May 2018",
+        "end_date": "Mar 2022",
+        "logo": "/static/work/adidas.jpg"
+    },
+     {
+        "company": "BOLDKING",
+        "position": "Full Stack Developer",
+        "start_date": "Jun 2017",
+        "end_date": "Apr 2018",
+        "logo": "/static/work/boldking.jpg"
+    },{
+        "company": "Zup - Connect & Transform",
+        "position": "Senior Software Engineer",
+        "start_date": "Feb 2016",
+        "end_date": "Nov 2016",
+        "logo": "/static/work/zup.jpg"
+    },{
+        "company": "Replay4.me",
+        "position": "Software Engineer",
+        "start_date": "Oct 2014",
+        "end_date": "Jun 2015",
+        "logo": "/static/work/replay4me.jpg"
+    },{
+        "company": "Algar Mídia",
+        "position": "Software Engineer",
+        "start_date": "Mar 2008",
+        "end_date": "Jun 2014",
+        "logo": "/static/work/algar-midia.jpg"
+    }]
+%}
+
+{% block body %}
+    <div class="w-full flex-wrap sm:flex-nowrap flex flex-row">
+        <div class="w-full sm:w-[65%] pr-4 mb-7 sm:mb-0">
+            <p>My name is Eduardo Stuart and I'm currently working at Warner Bros. Discovery as a Senior Software Engineer.</p>
+        </div>
+        <div class="w-full sm:w-[35%] border-l border-gray-200 pl-4">
+            <h3 class="font-bold mb-7">Work</h3>
+            <div class="py-2 divide-y-8 divide-transparent">
+                {% for item in work %}
+                    <div class="flex w-full items-start">
+                        <img class="w-6 h-6 flex-none mr-2 rounded-md" src="{{ item.logo | url }}">
+                        <div class="text-sm">
+                            <p class="font-semibold">{{ item.company }}</p>
+                            <p class="text-xs">{{ item.position }}</p>
+                            <p class="text-xs text-gray-400">{{ item.start_date }} - {{ item.end_date }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
