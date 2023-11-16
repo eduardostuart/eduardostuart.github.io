@@ -27,15 +27,17 @@ jobs:
         with:
           node-version: 18
       - name: npm install and build
+        env:
+          SITE_URL: https://s.tuart.dev
         run: |
           npm install
-          npm run build 
+          npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: 'dist'
+          path: "dist"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
