@@ -6,6 +6,7 @@ const siteUrl = process.env.SITE_URL || "http://localhost:8080";
 const siteVersion = process.env.SITE_VERSION || "unknown";
 const aboutData = {
   work: require("./data/work.json"),
+  projects: require("./data/projects.json"),
 };
 
 /** @param {import("@11ty/eleventy").UserConfig} config */
@@ -45,6 +46,14 @@ module.exports = function (config) {
       month: "long",
       day: "numeric",
     });
+  });
+
+  // A filter to take the first n items of an array
+  config.addFilter("take", (value, limit) => {
+    if (Array.isArray(value)) {
+      return value.slice(0, limit);
+    }
+    return value;
   });
 
   // Minify html output
