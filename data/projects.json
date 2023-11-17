@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Mailwatch",
+    "tags": ["Rust", "Email", "IMAP", "Tauri", "Vue.js"],
+    "in_progress": true,
+    "description": "A system tray application that provides real-time notifications for unseen emails across multiple email accounts.",
+    "url": "https://github.com/eduardostuart/mailwatch"
+  },
+  {
+    "name": "Paperboy",
+    "tags": ["Rust", "RSS", " Email", "GitHub Actions"],
+    "url": "https://github.com/eduardostuart/paperboy",
+    "description": "Paperboy is a CLI tool that delivers new posts from your favorite sites by email."
+  },
+  {
+    "name": "Rust super tiny compiler",
+    "url": "https://github.com/eduardostuart/rust-the-super-tiny-compiler",
+    "description": "A rust version of the super tiny compiler",
+    "tags": ["Rust", "Compiler", "Just-for-fun"]
+  },
+  {
+    "name": "Tic-Tac-Toe Evolution",
+    "url": "https://github.com/eduardostuart/tictactoe-evolution",
+    "description": "Tic-Tac-Toe game inspired on Gobblet Gobblers game.",
+    "tags": ["React", "JavaScript", "Just-for-fun"]
+  },
+  {
+    "name": "FACE",
+    "url": "https://github.com/eduardostuart/face",
+    "description": "Face recognition (wrapper) package for Laravel",
+    "archived": true,
+    "tags": ["Laravel", "PHP", "Face++", "Face recognition"]
+  }
+]

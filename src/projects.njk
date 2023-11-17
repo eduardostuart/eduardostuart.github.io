@@ -1,0 +1,39 @@
+{% extends "./layouts/main.njk" %}
+
+{%block title %}Projects - Eduardo Stuart{% endblock %}
+
+{% block current_page %}
+    <h2>Projects</h2>
+{% endblock %}
+
+{% block body %}
+    <div class="w-full pt-7 sm:pt-14">
+        {% for project in about.projects %}
+            <div  class="rounded-md flex flex-row items-start bg-gray-50 text-sm hover:bg-white dark:bg-gray-950 dark:hover:bg-gray-900 p-2 w-full mb-4 last:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2 flex-none text-gray-400 dark:text-white/60">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/>
+                </svg>
+
+                <div>
+                    <p class="mb-2">
+                        <a href="{{ project.url }}" class="no-underline  font-bold">{{ project.name }}</a>
+                        {% if project.in_progress %}
+                            <span class="bg-gray-200 text-gray-700 font-semibold rounded-lg px-1 text-xs">in progress</span>
+                        {% endif %}
+                    </p>
+                    <p class="mb-2">
+                        {{ project.description }}
+                    </p>
+                    <p>
+                        {% for tag in project.tags %}
+                            <a href="https://github.com/eduardostuart?tab=repositories&amp;q={{ tag }}" target="_blank" class="inline-block px-2  mr-2 text-xs font-semibold no-underline rounded-full bg-lime-200 hover:bg-lime-400 text-black">
+                                {{ tag }}
+                            </a>
+                        {% endfor %}
+                    </p>
+                </div>
+
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
