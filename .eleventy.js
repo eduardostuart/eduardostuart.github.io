@@ -12,6 +12,7 @@ const aboutData = {
 /** @param {import("@11ty/eleventy").UserConfig} config */
 module.exports = function (config) {
   // Global variables
+  config.addGlobalData("production", isProduction);
   config.addGlobalData("siteUrl", siteUrl);
   config.addGlobalData("siteVersion", siteVersion);
   config.addGlobalData("about", aboutData);
