@@ -9,10 +9,10 @@ body {
 }
 
 a {
-  @apply text-black  dark:text-white dark:no-underline underline relative dark:before:bg-yellow-400 before:bg-lime-100 before:absolute before:w-full before:h-[30%] before:content-[''] before:top-[70%] before:-rotate-[.8deg] before:z-[-1];
+  @apply text-black  dark:text-white dark:no-underline underline relative dark:before:bg-lime-400/50 before:bg-lime-100 before:absolute before:w-full before:h-[27%] before:content-[''] before:top-[75%] before:-rotate-1 before:z-[-1];
 }
 
 a:hover,
 a:focus {
-  @apply bg-lime-100 dark:bg-yellow-200  dark:text-black;
+  @apply bg-lime-100 dark:bg-lime-200  dark:text-black;
 }
