@@ -8,6 +8,7 @@ const aboutData = {
   work: require("./data/work.json"),
   projects: require("./data/projects.json"),
   reading: require("./data/reading.json"),
+  tech: require("./data/tech.json"),
 };
 
 /** @param {import("@11ty/eleventy").UserConfig} config */

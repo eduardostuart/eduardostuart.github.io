@@ -1,0 +1,66 @@
+[
+  {
+    "category": "Hardware",
+    "items": [
+      {
+        "name": "MacBook Pro 13\" (M2, 2022) - 512gb SSD; 8gb RAM; Silver",
+        "link": "https://amzn.eu/d/43GneIe"
+      },
+      {
+        "name": "SATECHI USB-C Slim Multiport Adapter",
+        "link": "https://amzn.eu/d/44xu6Lt"
+      },
+      {
+        "name": "Apple AirPods (2nd generation)",
+        "link": "https://amzn.eu/d/7xSIy87"
+      }
+    ]
+  },
+  {
+    "category": "Tools",
+    "items": [
+      {
+        "name": "vscode",
+        "link": "https://code.visualstudio.com/"
+      },
+      {
+        "name": "Dataflare",
+        "link": "https://dataflare.app/"
+      },
+      {
+        "name": "iTerm2",
+        "link": "https://iterm2.com/"
+      },
+      {
+        "name": "ohmyzsh",
+        "link": "https://ohmyz.sh/"
+      },
+      {
+        "name": "Insomnia",
+        "link": "https://insomnia.rest/download"
+      },
+      {
+        "name": "Dato",
+        "link": "https://apps.apple.com/us/app/dato/id1470584107?mt=12"
+      },
+      {
+        "name": "Rectangle",
+        "link": "https://rectangleapp.com/"
+      }
+    ]
+  },
+  {
+    "category": "Misc.",
+    "items": [
+      {
+        "name": "vscode theme: Night Owl (No italics)",
+        "link": "https://marketplace.visualstudio.com/items?itemName=sdras.night-owl"
+      },
+
+      {
+        "name": "ohmyzsh theme: robbyrussell",
+        "link": "https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#robbyrussell"
+      }
+    ]
+  }
+]
