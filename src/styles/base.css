@@ -5,14 +5,14 @@ app {
 }
 
 body {
-  @apply bg-slate-100 dark:bg-black;
+  @apply bg-zinc-50 dark:bg-black;
 }
 
 a {
-  @apply text-black  dark:text-white dark:no-underline underline relative dark:before:bg-lime-400/50 before:bg-lime-100 before:absolute before:w-full before:h-[27%] before:content-[''] before:top-[75%] before:-rotate-1 before:z-[-1];
+  @apply text-black  dark:text-white dark:no-underline underline relative dark:before:bg-indigo-400/50 before:bg-indigo-100 before:absolute before:w-full before:h-[27%] before:content-[''] before:top-[75%] before:-rotate-1 before:z-[-1];
 }
 
 a:hover,
 a:focus {
-  @apply bg-lime-100 dark:bg-lime-200  dark:text-black;
+  @apply bg-indigo-100 dark:bg-indigo-200  dark:text-black;
 }
