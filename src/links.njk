@@ -1,0 +1,20 @@
+{% extends "./layouts/centralized.njk" %}
+
+{% block content %}
+    <div class="my-3">
+        <p><img src="https://github.com/eduardostuart.png" class="w-[100px] h-[100px] rounded-full mx-auto"/></p>
+        <h1 class="w-full block text-center my-2">
+            <a href="{{ '/' | url }}" class="inline-block text-4xl no-underline text-black/70 dark:text-white font-extrabold">
+                Eduardo Stuart
+            </a>
+        </h1>
+        <p class="py-2 text-xs text-center block">Software Engineer interested in distributed systems, programming languages, and developer tools.</p>
+    </div>
+    <nav class="flex flex-col my-10 space-y-5 text-center">
+        {% for link in about.links %}
+            <a href="{{ link.url | url }}" target="_blank" class="no-underline transition-shadow ease-in-out duration-500 before:content-[] border border-zinc-100 hover:shadow-2xl shadow w-full p-2 block rounded-md text-lg bg-white hover:bg-white">
+                {{ link.label }}
+            </a>
+        {% endfor %}
+    </nav>
+{% endblock %}

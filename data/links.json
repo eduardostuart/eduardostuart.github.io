@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://s.tuart.dev/posts",
+    "label": "Blog"
+  },
+  {
+    "url": "https://s.tuart.dev/projects",
+    "label": "Projects"
+  },
+  {
+    "url": "https://github.com/eduardostuart",
+    "label": "GitHub"
+  },
+  {
+    "url": "https://www.youtube.com/@EduardoStuart",
+    "label": "YouTube"
+  },
+  {
+    "url": "https://twitter.com/eduardostuart",
+    "label": "X"
+  }
+]

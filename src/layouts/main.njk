@@ -1,51 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>
-      {%block title %}Eduardo Stuart{% endblock %}
-    </title>
+{% extends "./base.njk" %}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+{%block body %}
 
-    <link rel="stylesheet" href="{{ '/style.css' | url }}?v={{ siteVersion }}"/>
-    {% if production %}
-      <script 
-        defer 
-        type="text/javascript" 
-        src="https://abracadabra.tuart.dev/p.js" 
-        id="pirschjs" 
-        data-code="pHwNXgJ7heivj9c2p3tdeIfXPrVBtzbI"
-        data-domain="s.tuart.dev,tuart.dev"></script>
-    {% endif %}
-  </head>
+  <main>
+    <div class="w-full max-w-[900px] pt-7 pb-14 mx-auto px-7 lg:px-6">
 
-  <body class="font-mono font-normal antialiased text-sm">
-    <main>
-      <div class="w-full max-w-[900px] pt-7 pb-14 mx-auto px-7 lg:px-6">
-
-        {% block header %}
-          <header class="flex flex-row flex-wrap sm:flex-nowrap items-center w-full border-b border-gray-100 dark:border-white/10 py-4">
-            <a href="{{ '/' | url }}" class="md:text-4xl text-4xl no-underline text-black/70 dark:text-white font-extrabold">
-              <h1>
+      {% block header %}
+        <header class="flex flex-row flex-wrap sm:flex-nowrap items-center w-full border-b border-gray-100 dark:border-white/10 py-4">
+          <a href="{{ '/' | url }}" class="md:text-4xl text-4xl no-underline text-black/70 dark:text-white font-extrabold">
+            <h1>
                   Eduardo Stuart
               </h1>
-            </a>
+          </a>
 
-            <div class="block w-full sm:ml-auto sm:w-auto text-gray-400">
-              {% block current_page %}{% endblock %}
-            </div>
+          <div class="block w-full sm:ml-auto sm:w-auto text-gray-400">
+            {% block current_page %}{% endblock %}
+          </div>
 
-          </header>
-        {% endblock %}
+        </header>
+      {% endblock %}
 
-        <section class="w-full text-gray-700 dark:text-white">
-          {% block body %}{% endblock %}
-        </section>
-      </div>
-    </main>
-  </body>
-</html>
+      <section class="w-full text-gray-700 dark:text-white">
+        {% block content %}{% endblock %}
+      </section>
+    </div>
+  </main>
+
+{% endblock %}

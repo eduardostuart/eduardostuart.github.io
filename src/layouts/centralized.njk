@@ -1,0 +1,14 @@
+{% extends "./base.njk" %}
+
+{%block body %}
+
+    <main>
+        <div class="w-full max-w-[420px] mx-auto pt-7 pb-14 px-7 lg:px-6">
+
+            <section class="w-full text-gray-700 dark:text-white">
+                {% block content %}{% endblock %}
+            </section>
+        </div>
+    </main>
+
+{% endblock %}
